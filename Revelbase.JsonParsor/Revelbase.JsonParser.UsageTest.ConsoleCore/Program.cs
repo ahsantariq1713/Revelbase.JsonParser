@@ -22,7 +22,7 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
         static void Job()
         {
             Console.Clear();
-            Console.WriteLine("Json Parsor Usage Test!");
+            Console.WriteLine("Json Parser Usage Test!");
             Console.WriteLine("Please paste file path here");
             var path = Console.ReadLine();
             try
@@ -57,7 +57,7 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
                 Console.ForegroundColor = ConsoleColor.White;
 
                 Console.WriteLine($"{sr} records found");
-                Console.WriteLine($"{span.TotalSeconds} seconds taken to deserialize json data");
+                Console.WriteLine("{0:N1} seconds taken to deserialize json data", span.TotalSeconds);
 
                 Console.ResetColor();
             }
