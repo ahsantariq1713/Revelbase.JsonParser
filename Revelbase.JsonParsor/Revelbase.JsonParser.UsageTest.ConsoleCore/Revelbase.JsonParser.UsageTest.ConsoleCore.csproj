@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Revelbase.JsonParser.Domain\Revelbase.JsonParser.Core.csproj" />
+    <ProjectReference Include="..\Revelbase.JsonParser.Core\Revelbase.JsonParser.Core.csproj" />
   </ItemGroup>
 
 </Project>

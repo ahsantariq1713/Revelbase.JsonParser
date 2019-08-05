@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelbase.JsonParser.Core", "Revelbase.JsonParser.Domain\Revelbase.JsonParser.Core.csproj", "{64096B21-5C53-4AD7-A5B6-C698C63C0A58}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelbase.JsonParser.UsageTest.ConsoleCore", "Revelbase.JsonParser.UsageTest.ConsoleCore\Revelbase.JsonParser.UsageTest.ConsoleCore.csproj", "{4B5C9FD7-43D6-483A-8002-93566D077110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revelbase.JsonParser.Core", "Revelbase.JsonParser.Core\Revelbase.JsonParser.Core.csproj", "{5B6E8D3F-C43B-425D-BBE9-24B0572FA6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64096B21-5C53-4AD7-A5B6-C698C63C0A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64096B21-5C53-4AD7-A5B6-C698C63C0A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64096B21-5C53-4AD7-A5B6-C698C63C0A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64096B21-5C53-4AD7-A5B6-C698C63C0A58}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B5C9FD7-43D6-483A-8002-93566D077110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4B5C9FD7-43D6-483A-8002-93566D077110}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B5C9FD7-43D6-483A-8002-93566D077110}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B5C9FD7-43D6-483A-8002-93566D077110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6E8D3F-C43B-425D-BBE9-24B0572FA6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6E8D3F-C43B-425D-BBE9-24B0572FA6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6E8D3F-C43B-425D-BBE9-24B0572FA6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6E8D3F-C43B-425D-BBE9-24B0572FA6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

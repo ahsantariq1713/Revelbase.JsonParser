@@ -1,4 +1,5 @@
-﻿using Revelbase.JsonParser.Core;
+﻿
+using Revelbase.JsonParser.Core;
 using System;
 using System.Linq;
 
