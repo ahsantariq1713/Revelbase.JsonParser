@@ -34,21 +34,25 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
                 var startTime = DateTime.Now;
                 foreach (var choice in choices)
                 {
-                    Console.WriteLine(
-                        $"Record # {++sr} ---------------------------------------------------------------------\n" +
-                        $"{nameof(Choice.ID)}:{choice.ID}\n" +
-                        $"{nameof(Choice.Weighting)}:{choice.Weighting}\n" +
-                        $"{nameof(Choice.Groups)}:{choice.Groups}\n" +
-                        $"{nameof(Choice.EventName)}:{choice.EventName}\n" +
-                        $"{nameof(Choice.ChoiceName)}:{choice.ChoiceName}\n" +
-                        $"{nameof(Choice.OutcomeName)}:{choice.OutcomeName}\n" +
-                        $"{nameof(Choice.OutcomeNextGroup)}:{choice.OutcomeNextGroup}\n" +
-                        $"{nameof(Choice.OutcomeAddCards)}:{choice.OutcomeAddCards}\n" +
-                        $"{nameof(Choice.ChoiceName1)}:{choice.ChoiceName1}\n" +
-                        $"{nameof(Choice.OutcomeName1)}:{choice.OutcomeName1}\n" +
-                        $"{nameof(Choice.OutcomeNextGroup1)}:{choice.OutcomeNextGroup1}\n" +
-                        $"{nameof(Choice.OutcomeAddCards1)}:{choice.OutcomeAddCards1}\n"
-                        );
+                    if (choice.Weighting =="-1")
+                    {
+                        Console.WriteLine(
+                       $"Record # {++sr} ---------------------------------------------------------------------\n" +
+                       $"{nameof(Choice.ID)}:{choice.ID}\n" +
+                       $"{nameof(Choice.Weighting)}:{choice.Weighting}\n" +
+                       $"{nameof(Choice.Groups)}:{choice.Groups}\n" +
+                       $"{nameof(Choice.EventName)}:{choice.EventName}\n" +
+                       $"{nameof(Choice.ChoiceName)}:{choice.ChoiceName}\n" +
+                       $"{nameof(Choice.OutcomeName)}:{choice.OutcomeName}\n" +
+                       $"{nameof(Choice.OutcomeNextGroup)}:{choice.OutcomeNextGroup}\n" +
+                       $"{nameof(Choice.OutcomeAddCards)}:{choice.OutcomeAddCards}\n" +
+                       $"{nameof(Choice.ChoiceName1)}:{choice.ChoiceName1}\n" +
+                       $"{nameof(Choice.OutcomeName1)}:{choice.OutcomeName1}\n" +
+                       $"{nameof(Choice.OutcomeNextGroup1)}:{choice.OutcomeNextGroup1}\n" +
+                       $"{nameof(Choice.OutcomeAddCards1)}:{choice.OutcomeAddCards1}\n"
+                       );
+
+                    }
                 }
                 var endTime = DateTime.Now;
                 var span = endTime - startTime;
