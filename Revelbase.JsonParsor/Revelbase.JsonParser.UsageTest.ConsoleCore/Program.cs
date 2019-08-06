@@ -9,7 +9,7 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
     {
         static void Main(string[] args)
         {
-            Start:
+        Start:
             Job();
 
             Console.WriteLine("Press Y to restart or any other key to abort");
@@ -34,7 +34,7 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
                 var startTime = DateTime.Now;
                 foreach (var choice in choices)
                 {
-                    if (choice.Weighting =="-1")
+                    if (choice.Weighting == "-1")
                     {
                         Console.WriteLine(
                        $"Record # {++sr} ---------------------------------------------------------------------\n" +
@@ -51,20 +51,48 @@ namespace Revelbase.JsonParser.UsageTest.ConsoleCore
                        $"{nameof(Choice.OutcomeNextGroup1)}:{choice.OutcomeNextGroup1}\n" +
                        $"{nameof(Choice.OutcomeAddCards1)}:{choice.OutcomeAddCards1}\n"
                        );
+                        Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                        foreach (var c in choices.Where(a=> {
+                            try
+                            {
+                                return a.OutcomeAddCards.Contains(choice.ID) || a.OutcomeAddCards1.Contains(choice.ID);
+                            }
+                            catch (Exception)
+                            {
 
-                    }
+                                return false;
+                            }
+                        }))
+                        {
+                                Console.WriteLine(
+                         $"{nameof(Choice.ID)}:{c.ID}\n" +
+                         $"{nameof(Choice.Weighting)}:{c.Weighting}\n" +
+                         $"{nameof(Choice.Groups)}:{c.Groups}\n" +
+                         $"{nameof(Choice.EventName)}:{c.EventName}\n" +
+                         $"{nameof(Choice.ChoiceName)}:{c.ChoiceName}\n" +
+                         $"{nameof(Choice.OutcomeName)}:{c.OutcomeName}\n" +
+                         $"{nameof(Choice.OutcomeNextGroup)}:{c.OutcomeNextGroup}\n" +
+                         $"{nameof(Choice.OutcomeAddCards)}:{c.OutcomeAddCards}\n" +
+                         $"{nameof(Choice.ChoiceName1)}:{c.ChoiceName1}\n" +
+                         $"{nameof(Choice.OutcomeName1)}:{c.OutcomeName1}\n" +
+                         $"{nameof(Choice.OutcomeNextGroup1)}:{c.OutcomeNextGroup1}\n" +
+                         $"{nameof(Choice.OutcomeAddCards1)}:{c.OutcomeAddCards1}\n"
+                         );
+                            }
+
+                        }
                 }
-                var endTime = DateTime.Now;
-                var span = endTime - startTime;
+                    var endTime = DateTime.Now;
+                    var span = endTime - startTime;
 
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.White;
 
-                Console.WriteLine($"{sr} records found");
-                Console.WriteLine("{0:N1} seconds taken to deserialize json data", span.TotalSeconds);
+                    Console.WriteLine($"{sr} records found");
+                    Console.WriteLine("{0:N1} seconds taken to deserialize json data", span.TotalSeconds);
 
-                Console.ResetColor();
-            }
+                    Console.ResetColor();
+                }
             catch (Exception ex)
             {
                 Console.BackgroundColor = ConsoleColor.Red;
